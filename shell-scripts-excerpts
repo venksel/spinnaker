@@ -14,3 +14,7 @@ fi
 
 rm /opt/halyard -rf
 rm /var/log/spinnaker/halyard -rf
+
+# Install and configure Kubectl
+https://aws.amazon.com/blogs/opensource/continuous-delivery-spinnaker-amazon-eks/
+
