@@ -18,3 +18,14 @@ rm /var/log/spinnaker/halyard -rf
 # Install and configure Kubectl
 https://aws.amazon.com/blogs/opensource/continuous-delivery-spinnaker-amazon-eks/
 
+
+Create a file with contents:
+
+cat <<EOF > "${TEMPDIR}/kustomization.yaml"
+bases:
+- ../k8s-base
+images:
+- name: myapp
+  newName: registry.gitlab.com/jkpl/kustomize-demo
+  newTag: "${IMAGE_TAG}"
+EOF
